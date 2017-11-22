@@ -1,0 +1,73 @@
+
+<!-- Content Section -->
+<div class="container" ng-show="!loaderInfo">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="animated fadeIn">Parqueos registrados</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right">
+                <a href="#/add" class="btn btn-success hvr-float" role="button">Añadir Parking</a>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="dvMapL" class="animated zoomIn" style="width: 100%; height: 400px">
+            </div>
+          </div>
+    </div>
+</div>
+<!-- loader -->
+<div class="lds-css ng-scope" ng-show="loaderInfo">
+  <div  class="lds-rolling">
+    <div></div>
+  </div>
+</div>
+<!-- /Content Section -->
+<div class="container container-search">
+  <div class="row">
+    <div class="col-md-4">
+      <input class="form-control animated fadeInLeft" type="text" ng-model="searchText" placeholder="Buscar parqueo" ng-show="!loaderInfo" />
+    </div>
+  </div>
+</div>
+
+<section class="table-responsive animated fadeIn" ng-show="!loaderInfo">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Nro</th>
+        <th>Nombre Admin</th>
+        <th>Apellido Admin</th>
+        <th>Email</th>
+        <th>Nombre Parking</th>
+        <th>Dirección</th>
+        <th>Horario de Atención</th>
+        <th>Cantidad de Espacios</th>
+        <!-- <th>Latitud</th>
+        <th>Longitud</th> -->
+        <th>Disponibilidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="value in values | filter:searchText" ng-init="marker(value.latitude, value.longitude, value.name)">
+        <td>{{$index+1}}</td>
+        <td>{{value.name_admin}}</td>
+        <td>{{value.last_name_admin}}</td>
+        <td>{{value.email}}</td>
+        <td>{{value.name}}</td>
+        <td>{{value.address}}</td>
+        <td>{{value.working_hours}}</td>
+        <td>{{value.spaces_quantity}}</td>
+        <!-- <td>{{value.latitude}}</td>
+        <td>{{value.longitude}}</td> -->
+        <td>{{value.status | booleanFilter}}</td>
+        <td><a href="#/edit/{{value.$id}}" class="btn btn-small btn-primary hvr-grow-rotate">Editar</a> <a class="btn btn-small btn-danger hvr-grow-rotate" ng-click="removeTaxi(value.$id)">Eliminar</a></td>
+      
+      </tr>
+    </tbody>
+  </table>
+</section>
+  
+

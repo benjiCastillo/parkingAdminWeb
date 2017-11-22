@@ -1,0 +1,85 @@
+<div class="col-md-offset-2 col-md-8">
+    
+    <section class="well bs-component animated fadeInDown">
+    <h1 class="text-center">Editar Parking</h1>
+    <br>
+    <form name="edit_form" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="nombreAdmin" class="col-sm-2 control-label">Nombre Admin:</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="nombreAdmin"
+                     name ="NombreAdmin" ng-model="value.name_admin" placeholder="Nombre Admin"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="apellido" class="col-sm-2 control-label">Apellido:</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="apellido"
+                     name ="apellido" ng-model="value.last_name_admin" placeholder="Apellido Admin"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Email:</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="email" id="email"
+                     name ="email" ng-model="value.email" placeholder="Email"/>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="nombre" class="col-sm-2 control-label">Nombre de Parqueo:</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="nombre"
+                     name ="Nombre" ng-model="value.name" placeholder="Nombre"/>
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <label for="direccion" class="col-sm-2 control-label">Dirección:</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="direccion"
+                     name="direccion" ng-model="value.address" placeholder="Dirección"/>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="estado" class="col-sm-2 control-label">Estado:</label>
+            <div class="col-sm-10" data-ng-init="value.status=true">
+              <input type="radio" ng-model="value.status" name="status" data-ng-value="true"  id="rbtnDisponible">
+              <label for="rbtnDisponible">Disponible</label>
+              <input type="radio" ng-model="value.status" name="status" data-ng-value="false"  id="rbtnOcupado">
+              <label for="rbtnOcupado">Cerrado</label> 
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <label for="longitud" class="col-sm-2 control-label">Cantidad de Espacios:</label>
+            <div class="col-sm-10">
+              <input type="number"  class="form-control"  id="longitud"
+                     ng-model="value.spaces_quantity" placeholder="0"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="working_hours" class="col-sm-2 control-label">Horario de Atencion:</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="working_hours"
+                     name="working_hours" ng-model="value.working_hours" placeholder="Ej. 8:00 a 12:00 14:00 a 18:00"/>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div id="dvMapE" style="width: 100%; height: 300px">
+            </div>
+          </div>
+    
+      <div class="form-group">
+        <div class="col-sm-12">
+          <a ng-click="editTaxi()" class="btn btn-block btn-small btn-primary">Editar</a>
+          <br>
+          <a href="#/" class="btn btn-block btn-small btn-danger">Cancelar</a>
+        </div>
+      </div>
+    </form>
+    </section>
+</div>
+

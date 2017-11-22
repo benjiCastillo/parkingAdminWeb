@@ -1,0 +1,75 @@
+.container-background{
+    background-image: url('../img/sucre.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative
+}
+.container-background::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 23, 23, 0.6);
+    position: absolute
+}
+.row-container{
+    margin-top: 15%;
+}
+.brand-text{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 7rem;
+}
+.brand-text span{
+    color: #F44336;
+}
+.text-information{
+    font-size: 2rem;
+}
+.img-logo{
+    max-width: 250px;
+    margin: 0 auto;
+}
+.container-form{
+    background: rgba(255, 255, 255, 0.21);
+    margin-top: 10%;
+    padding: 30px;
+}
+.btn-signIn{
+    background-color: #f44336 !important;
+}
+.btn-primary:active, .btn-primary:hover{
+    color: #ffffff;
+    background-color: #D32F2F !important;
+    border-color: rgba(0,0,0,0);
+}
+.text-footer{
+    bottom: 0;
+    text-align:center;
+    margin-top:10%;
+    position: relative
+}
+.brand-freetech{
+    font-family: 'Audiowide', cursive;
+    font-size: 20px;
+}
+#errorText, #successText{
+    margin-top: 15px;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .brand-text{
+        font-size: 4rem;
+    }
+    .img-logo{
+        max-width: 150px;
+        margin: 0 auto;
+    }
+    .text-information{
+        font-size: 1.5rem;
+    }
+    .text-footer{
+        margin-top: 5%;
+    }
+}

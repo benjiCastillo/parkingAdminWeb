@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ParkingSucre</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body>
+
+    <section class="container-background">
+        <div class="container">
+            <div class="row row-container">
+                <div class="col-md-8 container-info">
+                       <img src="img/logo.svg" class="img-responsive img-logo animated zoomIn" alt="">
+                       <h1 class="text-center brand-text ">Parking<span>Sucre</span> </h1>
+                       <p class="text-center text-information animated fadeInLeft"> Rápido, Fácil </p>
+                       <p class="text-center text-information animated fadeInUp"> ahorra tiempo buscando parqueos en la ciudad!</p>
+                </div>
+                <div class="col-md-4 container-form animated fadeInUp" >
+                        <div class="form-group">
+                            <label for="user">User</label>
+                            <input type="text" class="form-control" id="user" placeholder="User">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Password</label>
+                            <input type="password" class="form-control" id="pass" placeholder="Password">
+                        </div>
+                        <button onclick="login()" class="btn btn-primary btn-block btn-signIn">Ingresar</button>
+                        <span id="errorText" class="text-danger animated tada">Error, revisa tus datos : |</span>
+                        <span id="successText" class="text-success animated tada">Bienvenido! ; )</span>
+                </div>
+            </div>
+        </div>
+        <p class="text-footer">By  <span class="brand-freetech">FREETECH</span> </p>
+    </section>
+   
+    
+</body>
+<script src="js/login.js"></script>
+</html>
